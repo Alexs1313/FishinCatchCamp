@@ -1,28 +1,15 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import { NavigationContainer as FishinCatchNavigation } from '@react-navigation/native';
+import Fishincatchstck from './FishinCatchCamp/fishincatchnav/Fishincatchstck';
+import { FishinCatchCntxProvider } from './FishinCatchCamp/fishincatchstore/Fishincatchcntx';
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
-
+const App = () => {
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
-    </View>
+    <FishinCatchNavigation>
+      <FishinCatchCntxProvider>
+        <Fishincatchstck />
+      </FishinCatchCntxProvider>
+    </FishinCatchNavigation>
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
+};
 
 export default App;
