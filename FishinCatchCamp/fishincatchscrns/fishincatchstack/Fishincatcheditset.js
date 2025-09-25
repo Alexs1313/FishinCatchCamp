@@ -119,7 +119,7 @@ const Fishincatcheditset = ({ route }) => {
           placeholderTextColor={'rgba(255, 255, 255, 0.5)'}
         />
         <TextInput
-          placeholder="Name"
+          placeholder="Surname"
           value={fishinCatchSurname}
           maxLength={15}
           onChangeText={setFishinCatchSurname}

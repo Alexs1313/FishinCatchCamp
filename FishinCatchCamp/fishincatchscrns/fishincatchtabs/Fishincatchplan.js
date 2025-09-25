@@ -553,7 +553,6 @@ for your search`}
                               />
                             </View>
                             <TouchableOpacity
-                              disabled={!fishinCatchAddress}
                               activeOpacity={0.7}
                               onPress={() =>
                                 setCurrFishinCardIdx(currFishinCardIdx + 1)
