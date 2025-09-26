@@ -1,7 +1,7 @@
 import { Dimensions, StyleSheet, Text, View } from 'react-native';
-import Fishincatchapplayout from '../../fishincatchcmpnts/Fishincatchapplayout';
-import { fishincatchgdsdta } from '../../fishincatchcnsts/fishincatchgdsdta';
-import Fishincatchgdcard from '../../fishincatchcmpnts/Fishincatchgdcard';
+import Fishincatchapplayout from '../../fishinCatchComponents/Fishincatchapplayout';
+import { fishincatchgdsdta } from '../../fishinCatchConsts/fishincatchgdsdta';
+import Fishincatchgdcard from '../../fishinCatchComponents/Fishincatchgdcard';
 const { height } = Dimensions.get('window');
 
 const Fishincatchgd = () => {

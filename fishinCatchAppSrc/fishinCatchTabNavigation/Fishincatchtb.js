@@ -1,9 +1,9 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Image, StyleSheet, Text } from 'react-native';
-import Fishincatchplan from '../fishincatchscrns/fishincatchtabs/Fishincatchplan';
-import Fishincatchgd from '../fishincatchscrns/fishincatchtabs/Fishincatchgd';
-import Fishincatchadv from '../fishincatchscrns/fishincatchtabs/Fishincatchadv';
-import Fishincatchsett from '../fishincatchscrns/fishincatchtabs/Fishincatchsett';
+import Fishincatchplan from '../fishinCatchScreens/fishinCatchTabScreens/Fishincatchplan';
+import Fishincatchgd from '../fishinCatchScreens/fishinCatchTabScreens/Fishincatchgd';
+import Fishincatchadv from '../fishinCatchScreens/fishinCatchTabScreens/Fishincatchadv';
+import Fishincatchsett from '../fishinCatchScreens/fishinCatchTabScreens/Fishincatchsett';
 
 const FishincatchTabNav = createBottomTabNavigator();
 

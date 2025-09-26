@@ -1,4 +1,4 @@
-import Fishincatchapplayout from '../../fishincatchcmpnts/Fishincatchapplayout';
+import Fishincatchapplayout from '../../fishinCatchComponents/Fishincatchapplayout';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import MapView, { Callout, Marker } from 'react-native-maps';
 import Geocoder from 'react-native-geocoding';
@@ -15,17 +15,61 @@ import {
   View,
 } from 'react-native';
 import { launchImageLibrary } from 'react-native-image-picker';
-import { useFishinCatchContext } from '../../fishincatchstore/Fishincatchcntx';
+import { useFishinCatchContext } from '../../fishinCatchStore/Fishincatchcntx';
 import { CalendarList } from 'react-native-calendars';
 import moment from 'moment';
-import Fishincatchplannercard from '../../fishincatchcmpnts/Fishincatchplannercard';
+import Fishincatchplannercard from '../../fishinCatchComponents/Fishincatchplannercard';
 import { useFocusEffect } from '@react-navigation/native';
 import Orientation from 'react-native-orientation-locker';
 const { height } = Dimensions.get('window');
-
 Geocoder.init('AIzaSyDU9BVwbP1PaxH77r2WhYIunL23CLo0_Mw', { language: 'en' });
-
 const fishincatchcat = ['Fishing', 'Camps', 'Shops'];
+
+const fishincatchmapstyle = [
+  { elementType: 'geometry', stylers: [{ color: '#242f3e' }] },
+  { elementType: 'labels.text.fill', stylers: [{ color: '#746855' }] },
+  { elementType: 'labels.text.stroke', stylers: [{ color: '#242f3e' }] },
+  {
+    featureType: 'administrative.locality',
+    elementType: 'labels.text.fill',
+    stylers: [{ color: '#d59563' }],
+  },
+  {
+    featureType: 'poi',
+    elementType: 'labels.text.fill',
+    stylers: [{ color: '#d59563' }],
+  },
+  {
+    featureType: 'poi.park',
+    elementType: 'geometry',
+    stylers: [{ color: '#263c3f' }],
+  },
+  {
+    featureType: 'road',
+    elementType: 'geometry',
+    stylers: [{ color: '#38414e' }],
+  },
+  {
+    featureType: 'road',
+    elementType: 'geometry.stroke',
+    stylers: [{ color: '#212a37' }],
+  },
+  {
+    featureType: 'road',
+    elementType: 'labels.text.fill',
+    stylers: [{ color: '#9ca5b3' }],
+  },
+  {
+    featureType: 'transit',
+    elementType: 'geometry',
+    stylers: [{ color: '#2f3948' }],
+  },
+  {
+    featureType: 'water',
+    elementType: 'geometry',
+    stylers: [{ color: '#17263c' }],
+  },
+];
 
 const Fishincatchplan = () => {
   const [keyboardHeight, setKeyboardHeight] = useState(250);
@@ -244,7 +288,7 @@ const Fishincatchplan = () => {
             }}
             onDayPress={day => {
               const formattedDate = formatDate(day.dateString);
-              setSelectedDate(formattedDate); // "13.10.2025"
+              setSelectedDate(formattedDate);
               setShowFishinCalendar(false);
             }}
           />
@@ -267,7 +311,7 @@ const Fishincatchplan = () => {
 
               <MapView
                 style={{ width: '100%', height: '100%' }}
-                customMapStyle={darkMapStyle}
+                customMapStyle={fishincatchmapstyle}
                 provider={Platform.OS === 'ios' ? 'google' : undefined}
                 region={region}
                 onPress={e => {
@@ -940,49 +984,3 @@ const styles = StyleSheet.create({
 });
 
 export default Fishincatchplan;
-
-const darkMapStyle = [
-  { elementType: 'geometry', stylers: [{ color: '#242f3e' }] },
-  { elementType: 'labels.text.fill', stylers: [{ color: '#746855' }] },
-  { elementType: 'labels.text.stroke', stylers: [{ color: '#242f3e' }] },
-  {
-    featureType: 'administrative.locality',
-    elementType: 'labels.text.fill',
-    stylers: [{ color: '#d59563' }],
-  },
-  {
-    featureType: 'poi',
-    elementType: 'labels.text.fill',
-    stylers: [{ color: '#d59563' }],
-  },
-  {
-    featureType: 'poi.park',
-    elementType: 'geometry',
-    stylers: [{ color: '#263c3f' }],
-  },
-  {
-    featureType: 'road',
-    elementType: 'geometry',
-    stylers: [{ color: '#38414e' }],
-  },
-  {
-    featureType: 'road',
-    elementType: 'geometry.stroke',
-    stylers: [{ color: '#212a37' }],
-  },
-  {
-    featureType: 'road',
-    elementType: 'labels.text.fill',
-    stylers: [{ color: '#9ca5b3' }],
-  },
-  {
-    featureType: 'transit',
-    elementType: 'geometry',
-    stylers: [{ color: '#2f3948' }],
-  },
-  {
-    featureType: 'water',
-    elementType: 'geometry',
-    stylers: [{ color: '#17263c' }],
-  },
-];

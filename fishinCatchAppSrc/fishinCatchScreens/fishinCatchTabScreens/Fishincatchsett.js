@@ -1,6 +1,6 @@
-import Fishincatchapplayout from '../../fishincatchcmpnts/Fishincatchapplayout';
+import Fishincatchapplayout from '../../fishinCatchComponents/Fishincatchapplayout';
 import { useNavigation } from '@react-navigation/native';
-import { useFishinCatchContext } from '../../fishincatchstore/Fishincatchcntx';
+import { useFishinCatchContext } from '../../fishinCatchStore/Fishincatchcntx';
 import {
   Dimensions,
   Image,

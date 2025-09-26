@@ -1,4 +1,4 @@
-import Fishincatchapplayout from '../../fishincatchcmpnts/Fishincatchapplayout';
+import Fishincatchapplayout from '../../fishinCatchComponents/Fishincatchapplayout';
 import { useNavigation } from '@react-navigation/native';
 import {
   Dimensions,

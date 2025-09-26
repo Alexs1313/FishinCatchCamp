@@ -1,7 +1,7 @@
-import Fishincatchapplayout from '../../fishincatchcmpnts/Fishincatchapplayout';
+import Fishincatchapplayout from '../../fishinCatchComponents/Fishincatchapplayout';
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { useCallback, useEffect, useState } from 'react';
-import { useFishinCatchContext } from '../../fishincatchstore/Fishincatchcntx';
+import { useFishinCatchContext } from '../../fishinCatchStore/Fishincatchcntx';
 import MapView, { Callout, Marker } from 'react-native-maps';
 const { height } = Dimensions.get('window');
 import {

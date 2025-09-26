@@ -1,4 +1,4 @@
-import Fishincatchapplayout from '../../fishincatchcmpnts/Fishincatchapplayout';
+import Fishincatchapplayout from '../../fishinCatchComponents/Fishincatchapplayout';
 import { launchImageLibrary } from 'react-native-image-picker';
 import { useState } from 'react';
 import {
@@ -11,7 +11,7 @@ import {
   View,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { useFishinCatchContext } from '../../fishincatchstore/Fishincatchcntx';
+import { useFishinCatchContext } from '../../fishinCatchStore/Fishincatchcntx';
 const { height } = Dimensions.get('window');
 
 const Fishincatcheditset = ({ route }) => {

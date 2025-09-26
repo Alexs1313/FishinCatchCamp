@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { useFishinCatchContext } from '../fishincatchstore/Fishincatchcntx';
+import { useFishinCatchContext } from '../fishinCatchStore/Fishincatchcntx';
 
 const Fishincatchplannercard = ({ card }) => {
   const fishincatchnav = useNavigation();

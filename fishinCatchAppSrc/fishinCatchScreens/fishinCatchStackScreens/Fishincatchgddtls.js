@@ -1,4 +1,4 @@
-import Fishincatchapplayout from '../../fishincatchcmpnts/Fishincatchapplayout';
+import Fishincatchapplayout from '../../fishinCatchComponents/Fishincatchapplayout';
 import {
   Dimensions,
   Image,
@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import Fishincatchreviewcard from '../../fishincatchcmpnts/Fishincatchreviewcard';
+import Fishincatchreviewcard from '../../fishinCatchComponents/Fishincatchreviewcard';
 import { useNavigation } from '@react-navigation/native';
 const { height } = Dimensions.get('window');
 
