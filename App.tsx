@@ -14,8 +14,8 @@ const App = () => {
       <FishinCatchCntxProvider>
         <FishinCatchNavigation.Navigator screenOptions={{ headerShown: false }}>
           <FishinCatchNavigation.Screen
-            name="Fishncatchtb"
-            component={Fishncatchtb}
+            name="Fishincatchtb"
+            component={Fishincatchtb}
           />
           <FishinCatchNavigation.Screen
             name="Fishincatchgddtls"
